@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "it255-dz10": {
+      "hosting": {
+        "IT255-DZ10": [
+          "it255-dz10"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "it255-dz10"
+  }
+}

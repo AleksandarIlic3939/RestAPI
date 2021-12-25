@@ -1,0 +1,31 @@
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="products.length === 0"></mat-spinner>
+
+    <mat-card *ngFor="let product of products" style="margin-top: 11px;">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{ product.name }}</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">${{ product.price }}<small class="text-muted fw-light"> / {{ product.quantity }}</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>
+                        <p>{{ product.description }}</p>
+                    </li>
+                    <li>
+                        <img style="height: 20%; width: 20%;" src="{{ product.imageUrl }}" />
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-outline-success"> Buy product</button>
+            </div>
+        </div>
+    </mat-card>
+</div>
+<br>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4">First</button>
+    <button (click)="previousPage()" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Previous</button>
+    <button (click)="nextPage()" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Next</button>
+    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Last</button>
+</div>
+<br>
